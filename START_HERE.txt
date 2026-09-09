@@ -1,0 +1,16 @@
+CSWAI QUICK START (Windows / uv)
+
+1. Install uv and Ollama.
+2. Open Command Prompt inside this CSWAI folder.
+3. Run:
+   ollama pull qwen3:1.7b
+   ollama pull nomic-embed-text
+   uv sync
+4. Put 1-2 approved SOLIDWORKS/CSWA PDFs in:
+   knowledge_base\01_core\fundamentals\
+5. Build the knowledge base:
+   uv run python scripts\build_knowledge_base.py
+6. Inspect:
+   uv run python scripts\inspect_knowledge_base.py
+7. Run CSWAI:
+   uv run python -m streamlit run app.py

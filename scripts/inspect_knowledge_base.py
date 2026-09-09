@@ -1,0 +1,10 @@
+from core.rag import knowledge_base_stats
+s=knowledge_base_stats()
+print("CSWAI Knowledge Base")
+print("Documents:",s["documents"])
+print("Pages:",s["pages"])
+print("Chunks:",s["chunks"])
+print("\nTopics")
+for k,v in sorted(s["topics"].items(),key=lambda x:x[1],reverse=True): print(f"{k:20} {v}")
+print("\nEKE layers")
+for k,v in sorted(s["eke_layers"].items(),key=lambda x:x[1],reverse=True): print(f"{k:20} {v}")
